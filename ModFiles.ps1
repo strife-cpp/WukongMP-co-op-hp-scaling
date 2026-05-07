@@ -4,13 +4,13 @@
 
 # Copied from build folder (bin/Configuration/netstandard2.0)
 $buildFiles = @(
-    "WukongMp.Coop.dll",
-    "manifest.json"
+    "WukongMp.Coop.dll"
 )
 
 # Copied from the "Content" folder to mod folder root
 $contentFiles = @(
-    "ArchiveSaveFile.1.sav"
+    "manifest.json",
+    "ArchiveSaveFile.1.sav" # Prologue save files for starting a new game
 )
 
 # Copied from build folder to mod folder root (only in Debug builds)

@@ -1,7 +1,5 @@
 ﻿using ReadyM.Api.DI;
-using ReadyM.Api.Helpers;
 using ReadyM.Api.Idents;
-using ReadyM.Relay.Client;
 using WukongMp.Api;
 using WukongMp.Coop.Configuration;
 using WukongMp.Sdk.Api;
@@ -9,7 +7,7 @@ using WukongMp.Sdk.Entities;
 
 namespace WukongMp.Coop.UI;
 
-public sealed class CoopWidgetManager : IHostedService, IDisposable
+public sealed class CoopWidgetManager : IHostedService
 {
     private readonly Lazy<CoopStatusWidget> _coopStatusWidget = new();
 

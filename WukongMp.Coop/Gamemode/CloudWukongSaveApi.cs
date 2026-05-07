@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
 using WukongMp.Api;
-using WukongMp.Api.Https;
 using WukongMp.Coop.Configuration;
 using WukongMp.Sdk.Api;
 using FileInfo = WukongMp.Api.Https.FileInfo;

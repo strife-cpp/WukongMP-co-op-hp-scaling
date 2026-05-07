@@ -1,9 +1,7 @@
 ﻿using b1;
 using Microsoft.Extensions.Logging;
 using ReadyM.Api.DI;
-using ReadyM.Api.Helpers;
 using ReadyM.Api.Idents;
-using ReadyM.Relay.Client;
 using UnrealEngine.Engine;
 using WukongMp.Api;
 using WukongMp.Api.WukongUtils;
@@ -12,7 +10,7 @@ using WukongMp.Sdk.Entities;
 
 namespace WukongMp.Coop;
 
-public sealed class CoopEventCallbacks(ILogger logger) : IHostedService, IDisposable
+public sealed class CoopEventCallbacks(ILogger logger) : IHostedService
 {
     public void OnScopeStart()
     {

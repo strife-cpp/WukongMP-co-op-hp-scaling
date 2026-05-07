@@ -20,7 +20,7 @@
     </PropertyGroup>
 
     <ItemGroup Condition="'$(UseSdkProjectReferences)' == 'true'">
-        <ProjectReference Include="..\WukongMp.Sdk\WukongMp.Sdk.csproj"/>
+        <ProjectReference Include="..\..\WukongMp.Sdk\WukongMp.Sdk.csproj"/>
     </ItemGroup>
 
     <ItemGroup Label="SDK DLLs" Condition="'$(UseSdkProjectReferences)' == 'false'">
@@ -95,7 +95,7 @@
         <Reference Include="PreludeLib">
             <HintPath>$(LoaderDllPath)\PreludeLib.dll</HintPath>
         </Reference>
-        <Reference Include="LiteNetLib">
+        <Reference Include="LiteNetLib" Condition="'$(UseSdkProjectReferences)' == 'false'">
             <HintPath>$(LoaderDllPath)\LiteNetLib.dll</HintPath>
         </Reference>
     </ItemGroup>

@@ -50,6 +50,7 @@ function Copy-BuildArtifacts
 {
     param(
         [Parameter(Mandatory = $true)]
+        [AllowEmptyCollection()]
         [string[]]$Files,
 
         [Parameter(Mandatory = $true)]

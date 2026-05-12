@@ -14,7 +14,9 @@ public sealed class ScaleMonsterHpSystem(ILogger logger) : ModSystemBase
     {
         var areaPlayers = WukongApi.Sync.AreaPlayers.Count;
 
-        var targetScaling = 1 + 1.5f * (areaPlayers - 1);
+        var requestedScaling = Config.BossHPScaling;
+
+        var targetScaling = 1 + requestedScaling * (areaPlayers - 1);
 
 #if DEBUG
         if (Config.ScaleMonsterHpToHalf)

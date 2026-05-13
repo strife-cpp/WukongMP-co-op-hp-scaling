@@ -16,7 +16,8 @@ public sealed class ScaleMonsterHpSystem(ILogger logger) : ModSystemBase
 
         var requestedScaling = Config.BossHPScaling;
 
-        var targetScaling = 1 + requestedScaling * (areaPlayers - 1);
+        //var targetScaling = 1 + 1.5f * (areaPlayers - 1); // Original formula
+        var targetScaling = requestedScaling + requestedScaling * (areaPlayers - 1);
 
 #if DEBUG
         if (Config.ScaleMonsterHpToHalf)

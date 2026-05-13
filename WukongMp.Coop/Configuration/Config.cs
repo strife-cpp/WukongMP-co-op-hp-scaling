@@ -3,6 +3,6 @@
 public static class Config
 {
     public static bool ScaleMonsterHpToHalf = false;
-    public static float BossHPScaling = 1.5f;
+    public static float BossHPScaling = 1.0f;
     public const float ColliderDisableTime = 3f; // seconds
 }

@@ -2,7 +2,7 @@
 
 public static class Config
 {
-    public static bool ScaleMonsterHpToHalf = false;
-    public static float BossHPScaling = 1.0f;
+    public static bool BossHPChanged = false;
+    public static float BossHPModifier = 1.5f;
     public const float ColliderDisableTime = 3f; // seconds
 }

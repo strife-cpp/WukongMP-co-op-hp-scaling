@@ -57,6 +57,6 @@ public static class CoopCommandRegistrations
         WukongApi.Chat.SendServerMessage($"Boss HP scaling changed!");
         WukongApi.Chat.SendServerMessage($"Boss HP is set to {scale}% and multiplied by {areaPlayers} Players.");
         WukongApi.Chat.SendServerMessage($"Boss HP is now {scale + scale * (areaPlayers - 1)}% of base HP.");
-        Config.BossHPScaling = scale * 0.01f;
+        Config.BossHPModifier = scale * 0.01f;
     }
 }

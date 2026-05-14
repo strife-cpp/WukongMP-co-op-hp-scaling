@@ -24,6 +24,13 @@ public sealed class ScaleMonsterHpSystem(ILogger logger) : ModSystemBase
             targetScaling = scaling + scaling * (areaPlayers - 1); // Scaling formula
         }
 
+#if DEBUG
+        if (Config.ScaleMonsterHpToHalf)
+        {
+            targetScaling = .5f;
+        }
+#endif
+
         foreach (var tamer in WukongApi.Sync.AllTamers)
         {
             if (!tamer.IsMonsterActive)

@@ -37,7 +37,7 @@ public static class CoopCommandRegistrations
         UGameplayStatics.OpenLevel(GameUtils.GetWorld(), new FName(name));
     }
 
-    private static void CustomScaling(int scale = 0)
+    private static void CustomScaling(int scale = 100)
     {        
         var owner = WukongApi.Sync.IsMasterClient;
 
@@ -45,7 +45,7 @@ public static class CoopCommandRegistrations
         
         if (!owner)
         {
-            WukongApi.Chat.ShowLocalMessage("Only the host can set boss HP scaling.", FLinearColor.OrangeRed);
+            WukongApi.Chat.ShowLocalMessage("Only the host can change Boss HP scaling.", FLinearColor.OrangeRed);
             return;
         }
         if (scale < 0)

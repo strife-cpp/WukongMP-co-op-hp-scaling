@@ -50,7 +50,7 @@ public static class CoopCommandRegistrations
         }
         if (scale < 0)
         {
-            WukongApi.Chat.ShowLocalMessage($"Boss HP scaling modifier is invalid.", FLinearColor.OrangeRed);
+            WukongApi.Chat.ShowLocalMessage($"Boss HP scaling modifier {scale} is invalid.", FLinearColor.OrangeRed);
             return;
         }
 
@@ -58,5 +58,6 @@ public static class CoopCommandRegistrations
         WukongApi.Chat.SendServerMessage($"Boss HP is set to {scale}% and multiplied by {areaPlayers} Players.");
         WukongApi.Chat.SendServerMessage($"Boss HP is now {scale + scale * (areaPlayers - 1)}% of base HP.");
         Config.BossHPModifier = scale * 0.01f;
+        Config.BossHPChanged = true;
     }
 }

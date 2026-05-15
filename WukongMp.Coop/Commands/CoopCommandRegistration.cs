@@ -48,7 +48,7 @@ public static class CoopCommandRegistrations
             WukongApi.Chat.ShowLocalMessage("Only the host can change Boss HP scaling.", FLinearColor.OrangeRed);
             return;
         }
-        if (scale < 0)
+        if (scale <= 0)
         {
             WukongApi.Chat.ShowLocalMessage($"Boss HP scaling modifier {scale} is invalid.", FLinearColor.OrangeRed);
             return;
